@@ -72,6 +72,7 @@
                   name="first"
                   minlength="2"
                 /><br>
+                <p id="firstname-error" class="error">Veuillez entrer 2 caractères ou plus pour le champ du prénom.</p>
               </div>
               <div
                 class="formData">
@@ -82,6 +83,7 @@
                   id="last"
                   name="last"
                 /><br>
+                <p id="lastname-error" class="error">Veuillez entrer 2 caractères ou plus pour le champ du nom.</p>
               </div>
               <div
                 class="formData">
@@ -92,6 +94,7 @@
                   id="email"
                   name="email"
                 /><br>
+                <p id="email-error" class="error">Veuillez entrer une adresse e-mail valide.</p>
               </div>
               <div
                 class="formData">
@@ -102,11 +105,13 @@
                   id="birthdate"
                   name="birthdate"
                 /><br>
+                <p id="birthdate-error" class="error">Vous devez entrer une date de naissance.</p>
               </div>
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99"><br>
+                <p id="quantity-error" class="error">Vous devez entrer un nombre entre 0 et 99.</p>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -177,26 +182,43 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <p id="location-error" class="error">Vous devez choisir une option</p>
               </div>
-
-              <div
+              <!-- <div
                 class="formData">
                 <input
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
+                  name="checkbox1"
                   checked
                 />
-                <input type="checkbox" class="checkbox-input" id="checkbox-condition" required>
+                <input type="checkbox" class="checkbox-input" id="checkbox-condition" for="checkbox-condition" required />
                 <label class="checkbox2-label" for="checkbox-condition">
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
+                <p id="checkbox-error" class="error">Vous devez vérifier que vous acceptez les termes et conditions.</p>
                 <br>
-                <input class="checkbox-input" type="checkbox" id="checkbox2" />
+                <input class="checkbox-input" type="checkbox" id="checkbox2" name="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
-                  Je Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
+                </label>
+                <br>
+              </div> -->
+              <div class="formData">
+                <input class="checkbox-input" type="checkbox" id="checkbox1"/>
+                <label class="checkbox2-label" for="checkbox1" required>
+                  <span class="checkbox-icon"></span>
+                  J'ai lu et accepté les conditions d'utilisation.
+                </label>
+                <p id="checkbox-condition" class="error">Vous devez vérifier que vous acceptez les termes et conditions.</p>
+                <br>
+                <input class="checkbox-input" type="checkbox" id="checkbox2"/>
+                <label class="checkbox2-label" for="checkbox2">
+                  <span class="checkbox-icon"></span>
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
               </div>
@@ -206,6 +228,7 @@
                 class="button"
                 value="C'est parti"
               />
+              <h3 class="thankyou">Merci pour votre inscription</h3>
             </form>
           </div>
         </div>

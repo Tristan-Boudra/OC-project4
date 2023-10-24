@@ -35,10 +35,10 @@ img {
   margin: 3.5%;
 }
 .header-logo {
-    float: left;
+  float: left;
 }
 .main-navbar {
-    float: right;
+  float: right;
 }
 .topnav a {
   float: left;
@@ -69,7 +69,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav a {display: none;}
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -77,7 +79,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -90,15 +94,15 @@ img {
   }
 }
 
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
+@media screen and (max-width: 540px) {
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
   }
-} 
+}
 
 main {
   font-size: 130%;
@@ -110,8 +114,6 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
-
-
 }
 
 .modal-btn {
@@ -419,7 +421,7 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
+  /* min-width: 424px; */
 }
 .hero-content::after {
   content: "";
@@ -479,20 +481,59 @@ footer {
 }
 
 /* Error message */
-.error{
+.error {
   display: none;
   font-size: 12px;
   color: #f00;
 }
 
-/* Thank you */
-.thankyou{
-  display: none;
-  font-size: 20px;
-  color: green;
+.succes-form {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media screen and (max-width: 800px) {
+.succes-form p {
+  font-size: 35px;
+  text-align: center;
+  padding: 10px;
+}
+
+#btn-succes {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Tablette */
+@media screen and (max-width: 1024px) {
+  .hero-headline {
+    font-size: 4rem;
+  }
+
+  .hero-section {
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: 51px 20px;
+  }
+}
+
+/* Responsive Mobile */
+@media screen and (max-width: 768px) {
   .hero-section {
     display: block;
     box-shadow: unset;
@@ -509,7 +550,7 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 3.5rem;
+    font-size: 2rem;
     white-space: normal;
   }
   .hero-text {
@@ -530,14 +571,3 @@ footer {
     text-align: center;
   }
 }
-
-@keyframes modalopen {
-  from {
-    opacity: 0;
-    transform: translateY(-150px);
-  }
-  to {
-    opacity: 1;
-  }
-}
-
